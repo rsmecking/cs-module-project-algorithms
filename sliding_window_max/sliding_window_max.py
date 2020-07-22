@@ -4,9 +4,17 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
-
-    pass
-
+    ans = []
+    queue = []
+    for i, v in enumerate(nums):
+        if queue and queue[0] <= i - k:
+            queue = queue[1:]
+        while queue and nums[queue[-1]] < v:
+            queue.pop()
+        queue.append(i)
+        if i + 1 >= k:
+            ans.append(nums[queue[0]])
+    return ans
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 
