@@ -4,17 +4,15 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
-    a_list = []
-    for i in range(0,len(arr)):
-        start = 1
+    a_list = [] #create empty list
+    for i in range(0,len(arr)): #go through list
+        start = 1   # create a starting point for multiplication
         for n in arr:
-            if n != arr[i]:
-                start *= n
-        a_list.append(start)
+            if n != arr[i]: #if the number being iterated through isn't itself
+                start *= n  # multiply that number by everything in the list
+        a_list.append(start) # append all the multiplications into the empty list
     return a_list
     
-
-
 
 if __name__ == '__main__':
     # Use the main function to test your implementation

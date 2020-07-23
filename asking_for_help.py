@@ -34,7 +34,7 @@ def divides_self(num):
     #       if digit does not evenly divide into num or if digit equals 0
     #           return False
     
-    for x in range(1,len(num)):        
+    for x in range(len(num)):        
         if x % 2 != 0 or x == 0:
             return False 
         else:

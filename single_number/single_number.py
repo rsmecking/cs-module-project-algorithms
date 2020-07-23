@@ -9,6 +9,7 @@ def single_number(arr):
     odd = arr[0]
     for i in range(1,len(arr)):
         odd ^=arr[i] # https://www.w3schools.com/python/python_operators.asp
+                     # checks to see if each number matchs via a binary check
     return odd
 
 
